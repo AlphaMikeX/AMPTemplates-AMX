@@ -508,7 +508,7 @@
         "InputType": "number",
         "MinValue": "1",
         "IsFlagArgument": false,
-        "Hidden": true,
+        "Hidden": false,
         "ParamFieldName": "maxFPS",
         "IncludeInCommandLine": true,
         "DefaultValue": "60",
@@ -960,7 +960,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AMX Config",
+        "DisplayName": "Config",
         "Category": "Arma Reforger:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets the server config used by the -config startup parameter. Enter only the file name without .json. The startup command automatically adds Configs/ and .json.",
@@ -976,7 +976,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AMX Profile",
+        "DisplayName": "Profile",
         "Category": "Arma Reforger:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets the profile name used by the -profile startup parameter. Enter only the profile suffix, for example Master or Test. The startup command automatically adds AReforger as prefix.",
@@ -992,10 +992,10 @@
         "EnumValues": {}
     },
 	{
-        "DisplayName": "AMX Use Profile as Addon Download Directory",
+        "DisplayName": "Use Master as Addon Download Directory",
         "Category": "Arma Reforger:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If enabled, the startup command will use the selected AMX profile as the addon download directory.",
+        "Description": "If enabled, the startup command will use AReforgerMaster profile as the addon download directory.",
         "Keywords": "amx,addon,download,directory,profile,startup",
         "FieldName": "AMXUseProfileAsAddonDownloadDir",
         "InputType": "checkbox",
@@ -1006,27 +1006,27 @@
         "DefaultValue": "",
         "EnumValues": {
             "False": "",
-            "True": "-addonDownloadDir \"{{$FullBaseDir}}AReforger{{AMXProfileName}}\" "
+            "True": "-addonDownloadDir \"{{$FullBaseDir}}AReforgerMaster\" "
         }
-    },
-    {
-        "DisplayName": "AMX List Scenarios",
-        "Category": "Arma Reforger:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Controls whether -listScenarios is included in the startup parameters.",
-        "Keywords": "amx,list,scenarios,listScenarios,startup",
-        "FieldName": "AMXListScenarios",
-        "InputType": "checkbox",
-        "IsFlagArgument": false,
-        "Hidden": false,
-        "ParamFieldName": "AMXListScenarios",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "-listScenarios ",
-        "EnumValues": {
-            "False": "",
-            "True": "-listScenarios "
-        }
-    },
+	 },
+	 {
+		  "DisplayName": "List Scenarios",
+		  "Category": "Arma Reforger:stadia_controller",
+		  "Subcategory": "Server:dns:1",
+		  "Description": "Controls whether -listScenarios is included in the startup parameters.",
+		  "Keywords": "amx,list,scenarios,listScenarios,startup",
+		  "FieldName": "AMXListScenarios",
+		  "InputType": "checkbox",
+		  "IsFlagArgument": false,
+		  "Hidden": false,
+		  "ParamFieldName": "AMXListScenarios",
+		  "IncludeInCommandLine": false,
+		  "DefaultValue": "",
+		  "EnumValues": {
+				"False": "",
+				"True": "-listScenarios "
+		  }
+	 },
     {
         "DisplayName": "Additional Server Startup Parameters",
         "Category": "Arma Reforger:stadia_controller",
